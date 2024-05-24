@@ -12,7 +12,7 @@ sidebar_position: 2
 
 :::note Создаём новый предмет и задаём ему характеристики
 ```kts
-//Это импорты
+// Это импорты
 import net.minecraft.item.Item
 import net.minecraft.item.Food
 import net.minecraftforge.registries.DeferredRegister
@@ -47,7 +47,7 @@ fun init() {
         ) 
     }
 
-    ITEMS.register(MOD_BUS) // Регестритуем наш предмет
+    ITEMS.register(MOD_BUS) // Регистрируем наш предмет
 }
 
 @SubscribeEvent // Этот метод запускается автоматически при событии, когда есть аннотация
