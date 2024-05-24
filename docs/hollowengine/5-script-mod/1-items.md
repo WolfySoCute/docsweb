@@ -8,7 +8,7 @@ description: Добавь новый предмет в игру
 
 :::note Создаём новый предмет и задаём ему характеристики
 ```kts
-//Всё что ниже - импорты классов самой игры, они обязательны!
+// Всё что ниже - импорты классов самой игры, они обязательны!
 import net.minecraft.world.item.Item
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.food.FoodProperties
@@ -20,7 +20,7 @@ fun init() {
     // Создаём регистратор для наших предметов
     val ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, <modid>)
 
-    //Регистрируем новый предмет
+    // Регистрируем новый предмет
     ITEMS.register("<registry_name>") {
         Item(
             // Настройки предмета, все они опциональные
@@ -30,7 +30,7 @@ fun init() {
                     Food.Builder()
                         .meat() // Теперь это мясо.
                         .nutrition(<count>) // Int | Питательность
-                        .saturationMod(<percent>) //Float |  Процент насыщения от питательности
+                        .saturationMod(<percent>) // Float |  Процент насыщения от питательности
                         .alwaysEat() // Можно съесть с полной полоской голода (как золотое яблоко)
                         .fast() // Съесть можно быстро)
                         .build() // Завершить настройку еды
